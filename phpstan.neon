@@ -1,0 +1,9 @@
+includes:
+  - vendor/sharoff45/library-phpstan-rules/general-extension.neon
+  - vendor/sharoff45/library-phpstan-rules/phpunit-extension.neon
+
+parameters:
+  ignoreErrors:
+    -
+      message: '#Missing @throws .+ annotation#'
+      path: tests/*.php

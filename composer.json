@@ -1,0 +1,41 @@
+{
+    "name": "sharoff45/library-support",
+    "type": "library",
+    "description": "Helper Library",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.0",
+        "ext-json": "*",
+        "ramsey/uuid": "^3.4 || ^4.1",
+        "symfony/property-access": "^4.3 || ^5.0 || ^6.0"
+    },
+    "require-dev": {
+        "sharoff45/library-cs-fixer": "^1.0",
+        "sharoff45/library-phpstan-rules": "^1.0",
+        "icanhazstring/composer-unused": "^0.7.5",
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "bin-dir": "bin",
+        "allow-plugins": {
+            "icanhazstring/composer-unused": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sharoff45\\Library\\Support\\": "src/"
+        },
+        "files": [
+            "src/Functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sharoff45\\Library\\Support\\Tests\\": "tests/"
+        }
+    }
+}
